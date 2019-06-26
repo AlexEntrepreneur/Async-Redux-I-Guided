@@ -7,7 +7,9 @@ import { makeQuoteOfTheDay, markFavourite, deleteQuote, getQuotes } from '../act
 export class Quotes extends React.Component {
   // state = {
   //   quotes: [],
-  //   quoteOfTheDay: null
+  //   quoteOfTheDay: null,
+      // error: ''
+      // loading: false
   // }
   componentDidMount() {
     this.props.getQuotes();

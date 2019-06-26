@@ -4,7 +4,9 @@ import {
   DELETE_QUOTE, 
   MAKE_QUOTE_OF_THE_DAY, 
   MARK_FAVOURITE,
-  GET_QUOTES
+  GET_QUOTES,
+  ADDING_QUOTE,
+  ADD_QUOTE_FAILURE
 } from './actionTypes';
 
 export function deleteQuote(id) {
