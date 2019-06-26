@@ -1,4 +1,3 @@
-import quotesData from '../quotesData';
 import {
   ADD_QUOTE,
   DELETE_QUOTE,
@@ -8,6 +7,8 @@ import {
 
 export function quotesReducer(sliceOfState = [], action) {
   switch (action.type) {
+    case GET_QUOTES:
+      return action.payload;
     case DELETE_QUOTE:
       return action.payload;
     case ADD_QUOTE:
