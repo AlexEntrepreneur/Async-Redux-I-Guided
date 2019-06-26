@@ -35,7 +35,7 @@ export class Quotes extends React.Component {
 function mapStateToProps(reducers) {
   return {
     quotes: reducers.quotes,
-    quoteOfTheDay: reducers.quoteOfTheDay,
+    quoteOfTheDay: reducers.quoteOfTheDay
   };
 }
 

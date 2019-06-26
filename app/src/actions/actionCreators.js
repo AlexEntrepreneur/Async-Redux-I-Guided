@@ -24,7 +24,15 @@ export function addQuote(quote) {
 }
 
 export function getQuotes() {
-
+  return (dispatch) => {
+    axios.get('http://localhost:5000/api/quotes')
+      .then(res => {
+        dispatch({ type: GET_QUOTES, payload: res.data })
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+  }
 };
 
 export function markFavourite(quote) {
