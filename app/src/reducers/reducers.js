@@ -25,7 +25,7 @@ export function quoteOfTheDayReducer(sliceOfState = null, action) {
     case MAKE_QUOTE_OF_THE_DAY:
       return action.payload;
     case DELETE_QUOTE:
-      if (action.payload === sliceOfState) {
+      if (action.payload.id === sliceOfState) {
         return null
       }
       return sliceOfState;
