@@ -35,8 +35,16 @@ export function getQuotes() {
   }
 };
 
-export function markFavourite(quote) {
-
+export function markFavourite(id, quote) {
+  return (dispatch) => {
+    axios.put(`http://localhost:5000/api/quotes/${id}`, quote)
+      .then(res => {
+        dispatch({ type: MARK_FAVOURITE, payload: res.data });
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+  }
 }
 
 export function makeQuoteOfTheDay(id) {
