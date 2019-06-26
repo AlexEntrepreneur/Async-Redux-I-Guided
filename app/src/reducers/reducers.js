@@ -2,7 +2,8 @@ import {
   ADD_QUOTE,
   DELETE_QUOTE,
   MAKE_QUOTE_OF_THE_DAY,
-  MARK_FAVOURITE 
+  MARK_FAVOURITE,
+  GET_QUOTES
 } from '../actions/actionTypes';
 
 export function quotesReducer(sliceOfState = [], action) {
