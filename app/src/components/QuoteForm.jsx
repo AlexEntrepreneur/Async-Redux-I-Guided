@@ -9,12 +9,14 @@ const QuoteForm = (props) => {
     const quoteInput = event.target['quote']
     event.preventDefault();
 
+    const newQuote = {
+      author: authorInput.value,
+      text: quoteInput.value
+    };
+
     authorInput.value 
-    && quoteInput.value 
-    && props.addQuote(
-      authorInput.value,
-      quoteInput.value,
-    );
+      && quoteInput.value 
+      && props.addQuote(newQuote);
 
     authorInput.value = '';
     quoteInput.value = '';

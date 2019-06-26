@@ -20,7 +20,15 @@ export function deleteQuote(id) {
 }
 
 export function addQuote(quote) {
-
+  return (dispatch) => {
+    axios.post('http://localhost:5000/api/quotes', quote)
+      .then(res => {
+        dispatch({ type: ADD_QUOTE, payload: res.data });
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+  }
 }
 
 export function getQuotes() {
