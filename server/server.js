@@ -47,9 +47,15 @@ function deleteQuoteById(req, res) {
 }
 
 function replaceQuoteById(req, res) {
-  quotes = quotes.filter(quote => quote.id !== req.params.id);
+  // quotes = quotes.filter(quote => quote.id !== req.params.id);
   const updatedQuote = { id: req.params.id, ...req.body };
-  quotes.push(updatedQuote);
+  quotes = quotes.map(quote => {
+    if (quote.id === req.params.id) {
+      return updatedQuote;
+    }
+    return quote;
+  })
+  // quotes.push(updatedQuote);
   res.json(quotes);
 }
 

@@ -13,7 +13,7 @@ const Quote = (props) => {
       <p className='author'>{ props.quote.author }</p>
       <div>
         <button onClick={() => props.deleteQuote(props.quote.id)}>DELETE</button>
-        <button onClick={() => props.markFavourite(props.quote.id, )}>MARK FAVOURITE</button>
+        <button onClick={() => props.markFavourite(props.quote.id, favouritedQuote)}>MARK FAVOURITE</button>
         <button onClick={() => props.makeQuoteOfTheDay(props.quote.id)}>MAKE QUOTE OF THE DAY</button>
       </div>
     </StyledQuote>
